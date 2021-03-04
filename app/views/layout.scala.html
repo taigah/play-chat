@@ -1,0 +1,21 @@
+@import views.html.helper.CSRF
+@(title: String)(content: Html)
+<!doctype html>
+<html>
+    <head>
+        <title>@title</title>
+        <meta charset="utf-8">
+        <script crossorigin src="https://unpkg.com/react@@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@@6/babel.min.js"></script>
+        <script type="text/jsx" src="/assets/javascripts/app.js" defer></script>
+    </head>
+    <body>
+        <h1>@title</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/chat">Chat</a></li>
+        </ul>
+        @content
+    </body>
+</html>
